@@ -1,16 +1,20 @@
 {
   "name": "frontend-project-lvl1",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nstme/frontend-project-lvl1.git"
   },
-  "author": "anastasiia sierbaieva",
+  "author": "nst nst",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nstme/frontend-project-lvl1/issues"
