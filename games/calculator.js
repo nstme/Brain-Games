@@ -4,16 +4,18 @@ const gameTask = 'What is the result of the expression?';
 
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
-const randOperator = () => {
+const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
-  const randIndex = getRandomNumber(0, 2);
+  const firstIndex = 0;
+  const lastIndex = operators.length - 1;
+  const randIndex = getRandomNumber(firstIndex, lastIndex);
   return operators[randIndex];
 };
 
-const getTask = (min, max) => {
+const getRandomExpression = (min, max) => {
   const a = getRandomNumber(min, max);
   const b = getRandomNumber(min, max);
-  return `${a} ${randOperator()} ${b}`;
+  return `${a} ${getRandomOperator()} ${b}`;
 };
 
 const getAnswer = (expression) => {
@@ -35,4 +37,4 @@ const getAnswer = (expression) => {
   return answer.toString();
 };
 
-export default () => initGame(gameTask, getTask, getAnswer);
+export default () => initGame(gameTask, getRandomExpression, getAnswer);
