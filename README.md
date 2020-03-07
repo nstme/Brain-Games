@@ -17,3 +17,10 @@ $ brain-even
 ```
 
 [![asciicast](https://asciinema.org/a/6SLtyMhVw9G1UgLRe8pofhHe8.svg)](https://asciinema.org/a/6SLtyMhVw9G1UgLRe8pofhHe8)
+
+## 'Calculator' Game
+```bash
+$ brain-calc
+```
+
+[![asciicast](https://asciinema.org/a/jasRzvnyIbSgkv497EVOOqFhb.svg)](https://asciinema.org/a/jasRzvnyIbSgkv497EVOOqFhb)
