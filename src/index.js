@@ -9,8 +9,10 @@ export default (gameTask, getQuestion, getAnswer) => {
 
   let correctUserAnswerCount = 0;
   const questionsCount = 3;
-  for (let i = 0; i < questionsCount; i += 1) {
-    const question = getQuestion(1, 100);
+  const min = 1;
+  const max = 100;
+  for (let i = 1; i <= questionsCount; i += 1) {
+    const question = getQuestion(min, max);
     const correctAsnwer = getAnswer(question);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
