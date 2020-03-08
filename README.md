@@ -24,3 +24,10 @@ $ brain-calc
 ```
 
 [![asciicast](https://asciinema.org/a/jasRzvnyIbSgkv497EVOOqFhb.svg)](https://asciinema.org/a/jasRzvnyIbSgkv497EVOOqFhb)
+
+## 'Greatest Common Divisor' Game
+```bash
+$ brain-gcd
+```
+
+[![asciicast](https://asciinema.org/a/USi7XNpmFzcxinOmcBcsPGRHB.svg)](https://asciinema.org/a/USi7XNpmFzcxinOmcBcsPGRHB)
