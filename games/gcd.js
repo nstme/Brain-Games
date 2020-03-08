@@ -11,9 +11,7 @@ const getRandomPair = (min, max) => {
 };
 
 const getAnswer = (pair) => {
-  const [first, second] = pair.split(' ');
-  const firstNum = first.toString();
-  const secondNum = second.toString();
+  const [firstNum, secondNum] = pair.split(' ');
   const minNum = Math.min(firstNum, secondNum);
   let gcd = '1';
   for (let i = minNum; i >= 1; i -= 1) {
