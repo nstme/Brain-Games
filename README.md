@@ -38,3 +38,10 @@ $ brain-progression
 ```
 
 [![asciicast](https://asciinema.org/a/NwijRenxfNjvIcoek2UEdMXaI.svg)](https://asciinema.org/a/NwijRenxfNjvIcoek2UEdMXaI)
+
+## 'Is Prime' Game
+```bash
+$ brain-prime
+```
+
+[![asciicast](https://asciinema.org/a/jURsf3uaPQTqIUZIeyfDuHOzw.svg)](https://asciinema.org/a/jURsf3uaPQTqIUZIeyfDuHOzw)
