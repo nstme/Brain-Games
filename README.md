@@ -31,3 +31,10 @@ $ brain-gcd
 ```
 
 [![asciicast](https://asciinema.org/a/USi7XNpmFzcxinOmcBcsPGRHB.svg)](https://asciinema.org/a/USi7XNpmFzcxinOmcBcsPGRHB)
+
+## 'Arithmetic progression' Game
+```bash
+$ brain-progression
+```
+
+[![asciicast](https://asciinema.org/a/NwijRenxfNjvIcoek2UEdMXaI.svg)](https://asciinema.org/a/NwijRenxfNjvIcoek2UEdMXaI)
