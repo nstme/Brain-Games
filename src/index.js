@@ -7,7 +7,6 @@ export default (gameTask, getGameData) => {
   if (!gameTask) return;
   console.log(gameTask);
 
-  let correctUserAnswerCount = 0;
   const questionsCount = 3;
   const min = 1;
   const max = 100;
@@ -22,11 +21,8 @@ export default (gameTask, getGameData) => {
       return;
     }
     if (userAnswer === correctAnswer) {
-      correctUserAnswerCount += 1;
       console.log('Correct!');
     }
-    if (correctUserAnswerCount === questionsCount) {
-      console.log(`Congratulations, ${userName}!`);
-    }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
