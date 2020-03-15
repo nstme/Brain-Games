@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-lvl1",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "5 cli math games for the player to find: if number is even; calculate expression; find greatest common divisor for 2 numbers; if number is prime; enter missing number in progression",
   "keywords": [
     "game",
