@@ -37,4 +37,10 @@ const getAnswer = (expression) => {
   return answer.toString();
 };
 
-export default () => initGame(gameTask, getRandomExpression, getAnswer);
+const getGameData = (min, max) => {
+  const question = getRandomExpression(min, max);
+  const answer = getAnswer(question);
+  return [question, answer];
+};
+
+export default () => initGame(gameTask, getGameData);

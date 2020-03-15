@@ -11,4 +11,10 @@ const getAnswer = (num) => {
   return 'no';
 };
 
-export default () => initGame(gameTask, getRandomNumber, getAnswer);
+const getGameData = (min, max) => {
+  const question = getRandomNumber(min, max);
+  const answer = getAnswer(question);
+  return [question, answer];
+};
+
+export default () => initGame(gameTask, getGameData);

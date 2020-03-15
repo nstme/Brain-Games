@@ -23,4 +23,10 @@ const getAnswer = (pair) => {
   return gcd;
 };
 
-export default () => initGame(gameTask, getRandomPair, getAnswer);
+const getGameData = (min, max) => {
+  const question = getRandomPair(min, max);
+  const answer = getAnswer(question);
+  return [question, answer];
+};
+
+export default () => initGame(gameTask, getGameData);

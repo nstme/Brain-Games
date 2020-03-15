@@ -47,4 +47,10 @@ const getAnswer = (progressionStr) => {
   return 'error';
 };
 
-export default () => initGame(gameTask, getProgression, getAnswer);
+const getGameData = (min, max) => {
+  const question = getProgression(min, max);
+  const answer = getAnswer(question);
+  return [question, answer];
+};
+
+export default () => initGame(gameTask, getGameData);
