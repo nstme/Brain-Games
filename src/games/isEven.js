@@ -1,4 +1,4 @@
-import initGame from '../src/index.js';
+import initGame from '../index.js';
 
 const gameTask = 'Answer \x1b[31m"yes"\x1b[0m if the number is even, otherwise answer \x1b[31m"no"\x1b[0m.';
 
