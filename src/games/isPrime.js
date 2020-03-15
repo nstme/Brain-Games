@@ -1,8 +1,7 @@
 import initGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const gameTask = 'Answer \x1b[31m"yes"\x1b[0m if given number is prime, otherwise answer \x1b[31m"no"\x1b[0m.';
-
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 const isPrime = (num) => {
   if (num === 1) return true;
