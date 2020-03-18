@@ -3,9 +3,9 @@ import getRandomNumber from '../utils.js';
 
 const gameTask = 'Find the greatest common divisor of given numbers.';
 
-const getRandomPair = (min, max) => {
-  const firstNumber = getRandomNumber(min, max);
-  const secondNumber = getRandomNumber(min, max);
+const getRandomPairQuestion = (a, b) => {
+  const firstNumber = getRandomNumber(a, b);
+  const secondNumber = getRandomNumber(a, b);
   return `${firstNumber} ${secondNumber}`;
 };
 
@@ -23,7 +23,7 @@ const getAnswer = (pair) => {
 };
 
 const getGameData = (min, max) => {
-  const question = getRandomPair(min, max);
+  const question = getRandomPairQuestion(min, max);
   const answer = getAnswer(question);
   return [question, answer];
 };
