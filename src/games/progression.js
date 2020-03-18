@@ -3,9 +3,12 @@ import getRandomNumber from '../utils.js';
 
 const gameTask = 'What number is missing in the progression?';
 
-const getProgression = (min, max) => {
+const min = 1;
+const max = 100;
+
+const getProgression = (minNum, maxNum) => {
   const progressionLength = 10;
-  const start = getRandomNumber(min, max);
+  const start = getRandomNumber(minNum, maxNum);
   const step = getRandomNumber(2, 10);
   const end = start + step * progressionLength;
   const hiddenIndex = getRandomNumber(0, progressionLength - 1);
@@ -46,7 +49,7 @@ const getAnswer = (progressionStr) => {
   return 'error';
 };
 
-const getGameData = (min, max) => {
+const getGameData = () => {
   const question = getProgression(min, max);
   const answer = getAnswer(question);
   return [question, answer];

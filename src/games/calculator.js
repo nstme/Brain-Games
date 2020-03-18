@@ -3,6 +3,9 @@ import getRandomNumber from '../utils.js';
 
 const gameTask = 'What is the result of the expression?';
 
+const min = 1;
+const max = 100;
+
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   const firstIndex = 0;
@@ -30,8 +33,8 @@ const getAnswer = (num1, num2, operator) => {
   }
 };
 
-const getGameData = (a, b) => {
-  const [num1, num2] = getRandomPairArray(a, b);
+const getGameData = () => {
+  const [num1, num2] = getRandomPairArray(min, max);
   const operator = getRandomOperator();
   const question = `${num1} ${operator} ${num2}`;
   const answer = getAnswer(num1, num2, operator).toString();
