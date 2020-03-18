@@ -13,10 +13,7 @@ const isPrime = (num) => {
   return true;
 };
 
-const getAnswer = (num) => {
-  if (isPrime(num)) return 'yes';
-  return 'no';
-};
+const getAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
 
 const getGameData = (min, max) => {
   const question = getRandomNumber(min, max);
