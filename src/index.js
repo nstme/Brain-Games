@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+const questionsCount = 3;
+
 export default (gameTask, getGameData) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
@@ -7,7 +9,6 @@ export default (gameTask, getGameData) => {
   if (!gameTask) return;
   console.log(gameTask);
 
-  const questionsCount = 3;
   for (let i = 1; i <= questionsCount; i += 1) {
     const gameData = getGameData();
     const [question, correctAnswer] = gameData;
