@@ -10,7 +10,7 @@ const getAnswer = (num) => (isEven(num) ? 'yes' : 'no');
 const getGameData = (min, max) => {
   const question = getRandomNumber(min, max);
   const answer = getAnswer(question);
-  return [question, answer];
+  return [question.toString(), answer];
 };
 
 export default () => initGame(gameTask, getGameData);
