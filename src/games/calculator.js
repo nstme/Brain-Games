@@ -17,23 +17,17 @@ const getRandomPairArray = (a, b) => {
   return [num1, num2];
 };
 
-const getAnswer = (expression) => {
-  const [a, operator, b] = expression.split(' ');
-  let answer;
+const getAnswer = (num1, num2, operator) => {
   switch (operator) {
     case '+':
-      answer = Number(a) + Number(b);
-      break;
+      return num1 + num2;
     case '-':
-      answer = Number(a) - Number(b);
-      break;
+      return num1 - num2;
     case '*':
-      answer = Number(a) * Number(b);
-      break;
+      return num1 * num2;
     default:
-      break;
+      throw new Error(`Error!Operator '${operator}' is invalid. Valid operators: '+', '-', '*'.`);
   }
-  return answer.toString();
 };
 
 const getGameData = (a, b) => {
