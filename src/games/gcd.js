@@ -3,28 +3,28 @@ import getRandomNumber from '../utils.js';
 
 const gameTask = 'Find the greatest common divisor of given numbers.';
 
-const getRandomPairQuestion = (a, b) => {
-  const firstNumber = getRandomNumber(a, b);
-  const secondNumber = getRandomNumber(a, b);
-  return `${firstNumber} ${secondNumber}`;
+const getRandomPairArray = (a, b) => {
+  const num1 = getRandomNumber(a, b);
+  const num2 = getRandomNumber(a, b);
+  return [num1, num2];
 };
 
-const getAnswer = (pair) => {
-  const [firstNum, secondNum] = pair.split(' ');
-  const minNum = Math.min(firstNum, secondNum);
-  let gcd = '1';
+const getGcd = (num1, num2) => {
+  let gcd = 1;
+  const minNum = Math.min(num1, num2);
   for (let i = minNum; i >= 1; i -= 1) {
-    if ((firstNum % i === 0) && (secondNum % i === 0)) {
+    if ((num1 % i === 0) && (num2 % i === 0)) {
       gcd = i;
-      return gcd.toString();
+      return gcd;
     }
   }
   return gcd;
 };
 
-const getGameData = (min, max) => {
-  const question = getRandomPairQuestion(min, max);
-  const answer = getAnswer(question);
+const getGameData = (a, b) => {
+  const [num1, num2] = getRandomPairArray(a, b);
+  const question = [num1, num2].join(' ');
+  const answer = getGcd(num1, num2).toString();
   return [question, answer];
 };
 
