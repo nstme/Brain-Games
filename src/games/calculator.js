@@ -11,10 +11,10 @@ const getRandomOperator = () => {
   return operators[randIndex];
 };
 
-const getRandomExpression = (min, max) => {
-  const a = getRandomNumber(min, max);
-  const b = getRandomNumber(min, max);
-  return `${a} ${getRandomOperator()} ${b}`;
+const getRandomPairArray = (a, b) => {
+  const num1 = getRandomNumber(a, b);
+  const num2 = getRandomNumber(a, b);
+  return [num1, num2];
 };
 
 const getAnswer = (expression) => {
@@ -36,9 +36,11 @@ const getAnswer = (expression) => {
   return answer.toString();
 };
 
-const getGameData = (min, max) => {
-  const question = getRandomExpression(min, max);
-  const answer = getAnswer(question);
+const getGameData = (a, b) => {
+  const [num1, num2] = getRandomPairArray(a, b);
+  const operator = getRandomOperator();
+  const question = `${num1} ${operator} ${num2}`;
+  const answer = getAnswer(num1, num2, operator).toString();
   return [question, answer];
 };
 
