@@ -6,12 +6,6 @@ const gameTask = 'Find the greatest common divisor of given numbers.';
 const min = 1;
 const max = 100;
 
-const getRandomPairArray = (a, b) => {
-  const num1 = getRandomNumber(a, b);
-  const num2 = getRandomNumber(a, b);
-  return [num1, num2];
-};
-
 const getGcd = (num1, num2) => {
   let gcd = 1;
   const minNum = Math.min(num1, num2);
@@ -25,8 +19,9 @@ const getGcd = (num1, num2) => {
 };
 
 const getGameData = () => {
-  const [num1, num2] = getRandomPairArray(min, max);
-  const question = [num1, num2].join(' ');
+  const num1 = getRandomNumber(min, max);
+  const num2 = getRandomNumber(min, max);
+  const question = `${num1} ${num2}`;
   const answer = getGcd(num1, num2).toString();
   return [question, answer];
 };
