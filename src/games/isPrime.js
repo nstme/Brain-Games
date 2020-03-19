@@ -21,7 +21,7 @@ const getAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
 const getGameData = () => {
   const question = getRandomNumber(min, max);
   const answer = getAnswer(question);
-  return [question, answer];
+  return [question.toString(), answer];
 };
 
 export default () => initGame(gameTask, getGameData);
