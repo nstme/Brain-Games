@@ -14,12 +14,6 @@ const getRandomOperator = () => {
   return operators[randIndex];
 };
 
-const getRandomPairArray = (a, b) => {
-  const num1 = getRandomNumber(a, b);
-  const num2 = getRandomNumber(a, b);
-  return [num1, num2];
-};
-
 const getAnswer = (num1, num2, operator) => {
   switch (operator) {
     case '+':
@@ -34,7 +28,8 @@ const getAnswer = (num1, num2, operator) => {
 };
 
 const getGameData = () => {
-  const [num1, num2] = getRandomPairArray(min, max);
+  const num1 = getRandomNumber(min, max);
+  const num2 = getRandomNumber(min, max);
   const operator = getRandomOperator();
   const question = `${num1} ${operator} ${num2}`;
   const answer = getAnswer(num1, num2, operator).toString();
