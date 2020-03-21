@@ -5,12 +5,10 @@ const gameTask = 'What number is missing in the progression?';
 
 const min = 1;
 const max = 100;
+const progressionLength = 10;
 
-const getProgression = (minNum, maxNum) => {
-  const progressionLength = 10;
-  const start = getRandomNumber(minNum, maxNum);
-  const step = getRandomNumber(2, 10);
-  const end = start + step * progressionLength;
+const getProgression = (start, step, progLength) => {
+  const end = start + step * progLength;
   const progression = [];
   for (let i = start; i < end; i += step) {
     progression.push(i);
@@ -19,12 +17,14 @@ const getProgression = (minNum, maxNum) => {
 };
 
 const getGameData = () => {
-  const progression = getProgression(min, max);
-  const hiddenIndex = getRandomNumber(0, progression.length - 1);
-  const temp = [...progression];
-  temp[hiddenIndex] = '..';
-  const question = temp.join(' ');
-  const answer = progression[hiddenIndex].toString();
+  const start = getRandomNumber(min, max);
+  const step = getRandomNumber(2, 10);
+  const progression = getProgression(start, step, progressionLength);
+  const hiddenItemIndex = getRandomNumber(0, progressionLength - 1);
+  const progressionWithHiddenItem = progression.slice();
+  progressionWithHiddenItem[hiddenItemIndex] = '..';
+  const question = progressionWithHiddenItem.join(' ');
+  const answer = progression[hiddenItemIndex].toString();
   return [question, answer];
 };
 
