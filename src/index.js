@@ -19,9 +19,7 @@ export default (gameTask, getGameData) => {
       console.log(`Let's try again, ${userName}!`);
       return;
     }
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-    }
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${userName}!`);
 };
