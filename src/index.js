@@ -6,7 +6,6 @@ export default (gameTask, getGameData) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  if (!gameTask) return;
   console.log(gameTask);
 
   for (let i = 1; i <= questionsCount; i += 1) {
