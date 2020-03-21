@@ -7,15 +7,10 @@ const min = 1;
 const max = 100;
 
 const getGcd = (num1, num2) => {
-  let gcd = 1;
-  const minNum = Math.min(num1, num2);
-  for (let i = minNum; i >= 1; i -= 1) {
-    if ((num1 % i === 0) && (num2 % i === 0)) {
-      gcd = i;
-      return gcd;
-    }
+  if (num2 === 0) {
+    return num1;
   }
-  return gcd;
+  return getGcd(num2, (num1 % num2));
 };
 
 const getGameData = () => {
