@@ -5,13 +5,13 @@ const gameTask = 'What is the result of the expression?';
 
 const min = 1;
 const max = 100;
+const operators = ['+', '-', '*'];
 
 const getRandomOperator = () => {
-  const operators = ['+', '-', '*'];
   const firstIndex = 0;
   const lastIndex = operators.length - 1;
-  const randIndex = getRandomNumber(firstIndex, lastIndex);
-  return operators[randIndex];
+  const index = getRandomNumber(firstIndex, lastIndex);
+  return operators[index];
 };
 
 const getAnswer = (num1, num2, operator) => {
@@ -23,7 +23,7 @@ const getAnswer = (num1, num2, operator) => {
     case '*':
       return num1 * num2;
     default:
-      throw new Error(`Error!Operator '${operator}' is invalid. Valid operators: '+', '-', '*'.`);
+      throw new Error(`Error! Operator '${operator}' is invalid. Valid operators: '${operators.join("', '")}'.`);
   }
 };
 
